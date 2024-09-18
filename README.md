@@ -1,11 +1,11 @@
 # ***FastestDet: it has higher accuracy and faster speed than Yolo-fastest https://github.com/dog-qiuqiu/FastestDet***
-# :zap:Yolo-FastestV2:zap:[![DOI](https://zenodo.org/badge/386585431.svg)](https://zenodo.org/badge/latestdoi/386585431)
-![image](https://github.com/dog-qiuqiu/Yolo-FastestV2/blob/main/img/demo.png)
+## Fork from @dog-qiuqiu/Yolo-FastestV2
+# :zap:Yolo-FastestV2-crack-detection:zap:[![DOI](https://zenodo.org/badge/386585431.svg)](https://zenodo.org/badge/latestdoi/386585431)
+![image](https://github.com/zero19970/Yolo-FastestV2-crack-dectection/blob/main/img/demo.png)
 * ***Simple, fast, compact, easy to transplant***
 * ***Less resource occupation, excellent single-core performance, lower power consumption***
 * ***Faster and smaller:Trade 0.3% loss of accuracy for 30% increase in inference speed, reducing the amount of parameters by 25%***
 * ***Fast training speed, low computing power requirements, training only requires 3GB video memory, gtx1660ti training COCO 1 epoch only takes 4 minutes***
-* ***算法介绍：https://zhuanlan.zhihu.com/p/400474142 交流qq群:1062122604***
 # Evaluating indicator/Benchmark
 Network|COCO mAP(0.5)|Resolution|Run Time(4xCore)|Run Time(1xCore)|FLOPs(G)|Params(M)
 :---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -29,9 +29,10 @@ Network|COCO mAP(0.5)|Resolution|Run Time(4xCore)|Run Time(1xCore)|FLOPs(G)|Para
 * Picture test
   ```
   python3 test.py --data data/coco.data --weights modelzoo/coco2017-0.241078ap-model.pth --img img/000139.jpg
+  python3 test.py --data datasets/WorkpieceCrack2/workpiece.data --weights weights/workpiece-290-epoch-0.788198ap-model.pth --img /img/sample0_crack.png
   ```
 <div align=center>
-<img src="https://github.com/dog-qiuqiu/Yolo-FastestV2/blob/main/img/000139_result.png"> />
+<img src="https://github.com/zero19970/Yolo-FastestV2-crack-dectection/blob/main/img/sample12_crack_result.png"> />
 </div>
 
 ## How to train
@@ -63,24 +64,23 @@ Network|COCO mAP(0.5)|Resolution|Run Time(4xCore)|Run Time(1xCore)|FLOPs(G)|Para
   
   train.txt
   ```
-  /home/qiuqiu/Desktop/dataset/train/000001.jpg
-  /home/qiuqiu/Desktop/dataset/train/000002.jpg
-  /home/qiuqiu/Desktop/dataset/train/000003.jpg
+  /full/path/to/dataset/train/000001.jpg
+  /full/path/to/dataset/train/000002.jpg
+  /full/path/to/dataset/train/000003.jpg
   ```
   val.txt
   ```
-  /home/qiuqiu/Desktop/dataset/val/000070.jpg
-  /home/qiuqiu/Desktop/dataset/val/000043.jpg
-  /home/qiuqiu/Desktop/dataset/val/000057.jpg
+  /full/path/to/dataset/val/000070.jpg
+  /full/path/to/dataset/val/000043.jpg
+  /full/path/to/dataset/val/000057.jpg
   ```
 * Generate the .names category label file, the sample content is as follows:
  
   category.names
   ```
-  person
-  bicycle
-  car
-  motorbike
+  severe_crack
+  light_scratch
+  cavity
   ...
   
   ```
@@ -145,49 +145,14 @@ Network|COCO mAP(0.5)|Resolution|Run Time(4xCore)|Run Time(1xCore)|FLOPs(G)|Para
 ### Train
 * Perform training tasks
   ```
-  python3 train.py --data data/coco.data
+  python3 train.py --data datasets/WorkpieceCrack2/workpiece.data
   ```
 ### Evaluation
 * Calculate map evaluation
   ```
-  python3 evaluation.py --data data/coco.data --weights modelzoo/coco2017-0.241078ap-model.pth
+  python3 evaluation.py --data datasets/WorkpieceCrack2/workpiece.data weights/workpiece-290-epoch-0.788198ap-model.pth
   ```
-# Deploy
-## NCNN
-* Convert onnx
-  ```
-  python3 pytorch2onnx.py --data data/coco.data --weights modelzoo/coco2017-0.241078ap-model.pth --output yolo-fastestv2.onnx
-  ```
-* onnx-sim
-  ```
-  python3 -m onnxsim yolo-fastestv2.onnx yolo-fastestv2-opt.onnx
-  ```
-* Build NCNN
-  ```
-  git clone https://github.com/Tencent/ncnn.git
-  cd ncnn
-  mkdir build
-  cd build
-  cmake ..
-  make
-  make install
-  cp -rf ./ncnn/build/install/* ~/Yolo-FastestV2/sample/ncnn
-  ```
-* Covert ncnn param and bin
-  ```
-  cd ncnn/build/tools/onnx
-  ./onnx2ncnn yolo-fastestv2-opt.onnx yolo-fastestv2.param yolo-fastestv2.bin
-  cp yolo-fastestv2* ../
-  cd ../
-  ./ncnnoptimize yolo-fastestv2.param yolo-fastestv2.bin yolo-fastestv2-opt.param yolo-fastestv2-opt.bin 1
-  cp yolo-fastestv2-opt* ~/Yolo-FastestV2/sample/ncnn/model
-  ```
-* run sample
-  ```
-  cd ~/Yolo-FastestV2/sample/ncnn
-  sh build.sh
-  ./demo
-  ```
+
 # Reference
 * https://github.com/Tencent/ncnn
 * https://github.com/AlexeyAB/darknet
