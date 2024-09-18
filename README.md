@@ -1,7 +1,7 @@
 # ***FastestDet: it has higher accuracy and faster speed than Yolo-fastest https://github.com/dog-qiuqiu/FastestDet***
 ## Fork from @dog-qiuqiu/Yolo-FastestV2
 # :zap:Yolo-FastestV2-crack-detection:zap:[![DOI](https://zenodo.org/badge/386585431.svg)](https://zenodo.org/badge/latestdoi/386585431)
-![image](https://github.com/zero19970/Yolo-FastestV2-crack-dectection/img/demo.png)
+![image](https://github.com/zero19970/Yolo-FastestV2-crack-dectection/blob/main/img/demo.png)
 * ***Simple, fast, compact, easy to transplant***
 * ***Less resource occupation, excellent single-core performance, lower power consumption***
 * ***Faster and smaller:Trade 0.3% loss of accuracy for 30% increase in inference speed, reducing the amount of parameters by 25%***
