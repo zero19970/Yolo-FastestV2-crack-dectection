@@ -1,0 +1,22 @@
+[name]
+model_name=workpiece
+
+[train-configure]
+epochs=300
+steps=150,250
+batch_size=10
+subdivisions=1
+learning_rate=0.0001
+
+[model-configure]
+pre_weights=None
+classes=1
+width=320
+height=320
+anchor_num=3
+anchors=25.59,27.01, 44.84,45.48, 55.95,84.27, 78.41,137.88, 109.12,54.34, 149.09,82.52
+
+[data-configure]
+train=/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/train.txt
+val=/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val.txt
+names=/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/workpiece.names

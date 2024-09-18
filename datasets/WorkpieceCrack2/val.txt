@@ -1,0 +1,16 @@
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample0_crack_db87a6e8b41480993b424424ffd776a9.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample0_crack_908558567d88c609edfd8302a390e68d.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample12_crack_3b1a86b76f0a51cb0a8a3f741ef316da.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample4_crack_169819c1aa66eb8fb107247d6856e51b.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample5_crack_4f4f88ea77696bb4d758e686161c2145.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample4_crack_2523af6626d30a1fabfe9829b3647cf8.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample11_crack_76ae56ce1e6f2403fe2b801998d285d4.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample12_crack_ee0e7a7929d0496e2be6eeb215a26bb0.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample0_crack_23f5faf2e679ef9dc1df4424ff5d66a7.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample10_crack_0e1b6a01ea6e6e9fda5340c3b8cb9c7e.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample10_crack_fd34ebe00241efea67e7a83fbc4c6f59.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample10_crack_d4c03a9cd042255efadcdbd4e73b15b5.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample4_crack_39900a670ff5391d615932629a9ddcc5.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample12_crack_023c3991ad9d593f967fb447a351c084.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample11_crack_6a236d1f5fc871cdd209fa7f802542e2.jpg
+/cache/lichenghang/project/Yolo-FastestV2/datasets/WorkpieceCrack2/val/images/sample11_crack_4818c18ab331eeaa51140cd19dbb00c0.jpg
